@@ -24,12 +24,19 @@ public class Program2 {
 		for (Department obj : list) {
 			System.out.println(obj);
 		}
-		
+		/*
 		System.out.println("\n=== Test 3 - Department insert ===");
 		Department newDepartment = new Department(null, "Toys");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! New ID = " + newDepartment.getId());
-
+		*/
+		
+		System.out.println("\n=== Test 4 - Department update ===");
+		department = departmentDao.findById(10);
+		department.setName("Games");
+		departmentDao.update(department);
+		System.out.println("Update completed!");
+		
 		sc.close();
 	}
 	
